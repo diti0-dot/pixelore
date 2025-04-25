@@ -1,0 +1,18 @@
+<h1>Posts</h1>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
+
+<div class="posts">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h2><%= link_to post.title, post %></h2>
+      <% if post.image.attached? %>
+        <%= image_tag post.image, style: "max-width: 300px; display: block" %>
+      <% end %>
+      <p><%= truncate(post.body, length: 100) %></p>
+      <p>Posted by: <%= post.user.email %></p>
+    </div>
+  <% end %>
+</div>
