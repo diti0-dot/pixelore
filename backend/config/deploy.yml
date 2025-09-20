@@ -1,6 +1,6 @@
 # Name of your application. Used to uniquely configure containers.
 service: backend
-
+startCommand: bundle exec rails db:migrate && bundle exec rails db:seed && bundle exec rails server
 # Name of the container image.
 image: your-user/backend
 
