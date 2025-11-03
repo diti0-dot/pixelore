@@ -464,3 +464,8 @@ input[type="text"]:focus {
 .user_info{
   text-align: center;
 }
+
+.cmt_card{
+  display: flex;
+  gap: 5px;
+}

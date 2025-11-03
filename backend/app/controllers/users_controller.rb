@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         username: current_user.username
       }
     else
-      guest = User.find(2) # safer to raise if missing
+      guest = User.find(2)
       render json: {
         id: guest.id,
         email: guest.email,

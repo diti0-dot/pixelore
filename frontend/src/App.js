@@ -36,6 +36,7 @@ useEffect(() => {
     setUser(userData);
   };
 
+
   return (
     <div className="App">
       <Header user={user} setUser={setUser} />
@@ -43,7 +44,7 @@ useEffect(() => {
 
       <main>
         <Routes>
-          <Route path="/" element={<PostIndex posts={posts} />} />
+          <Route path="/" element={<PostIndex posts={posts} setPosts={setPosts} />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/draw" element={<Draw user={user} setUser={setUser} setPosts={setPosts} fetchPosts={fetchPosts}/>}/>
           <Route path="/Show"  element={<Show user={user} setUser={setUser}/>} />

@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :post_pic
+  has_many :comments
 
 def post_pic_url
   if post_pic.attached?
